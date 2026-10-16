@@ -29,12 +29,6 @@ public class GameEngine {
         if (guess == target) {
             gameWon = true;
             return new GuessResult(true, "Correct! You guessed it in " + attempts + " attempts.", attempts);
-<<<<<<< HEAD
-        } else if (guess < target) {
-            return new GuessResult(false, "Too low! Try a higher number.", attempts);
-        } else {
-            return new GuessResult(false, "Too high! Try a lower number.", attempts);
-=======
         } else {
             String hint = getHint(guess);
             GuessResult result;
@@ -45,7 +39,6 @@ public class GameEngine {
             }
             result.setHint(hint);
             return result;
->>>>>>> bd9a75c (Add hint system to show proximity after 3 attempts)
         }
     }
 
